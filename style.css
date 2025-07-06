@@ -1,0 +1,118 @@
+/*Default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 400px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    padding: 12px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+#add-task-btn:hover {
+    background-color: #45a049;
+}
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+#task-list li {
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+#task-list li:hover {
+    background-color: #e9ecef;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  #add-task-btn {
+    width: 100%;
+  }
+
+  #task-input {
+    width: 100%;
+  }
+
+  .input-section input,
+  .input-section button {
+    margin-bottom: 10px;
+  }
+}
+li[draggable="true"] {
+  cursor: grab;
+}
+
+li[draggable="true"]:active {
+  opacity: 0.6;
+}
